@@ -20,6 +20,9 @@ try {
 } catch (error) {
   console.log("Error: " + error);
 }
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 
 // Routes
 app.use("/api", playerRoutes);
