@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 const url = process.env.MONGODB_URL;
-mongoose.connect(url, { useNewUrlParser: true });
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 const con = mongoose.connection;
 
 app.use(express.json());
