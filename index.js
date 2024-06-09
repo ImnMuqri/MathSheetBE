@@ -13,6 +13,7 @@ const con = mongoose.connection;
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => res.send("Express on Vercel"));
 try {
   con.on("open", () => {
     console.log("Connected to the database");
@@ -20,9 +21,6 @@ try {
 } catch (error) {
   console.log("Error: " + error);
 }
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
 
 // Routes
 app.use("/api", playerRoutes);
