@@ -25,7 +25,6 @@ try {
 app.use("/api", playerRoutes);
 
 const port = 9000;
-// app.listen(port, () => {
-//   console.log("Server started on port " + port);
-// });
-module.exports = app;
+app.listen(port, () => {
+  console.log("Server started on port " + port);
+});
