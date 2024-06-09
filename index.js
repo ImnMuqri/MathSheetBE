@@ -13,7 +13,7 @@ const con = mongoose.connection;
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => res.send("Express on Vercel"));
+app.get("/", (req, res) => res.send("Backend Connected"));
 try {
   con.on("open", () => {
     console.log("Connected to the database");
